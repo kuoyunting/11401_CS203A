@@ -1,27 +1,19 @@
-/*
-   ========================================
-   hash_fn.c — implement your hash functions
-   ========================================
-
-   Description:
-    This file contains the hash functions for integer and string keys.
-
-   Development History:
-    - 2025/11/11: Initial implementation
-    - 2025/11/17: Refactored to use hash_fn.h
-
-   Developer: Yu-Feng Huang <yfhuang@saturn.yzu.edu.tw>
- */
-
 #include "hash_fn.h"
-
 int myHashInt(int key, int m) {
-    // TODO: replace with your own design
-    return key % m;  // division method example
+    if (m <= 0) return 0;
+    if (key < 0) key = -key;
+    return key % m;
 }
 
 int myHashString(const char* str, int m) {
+    if (m <= 0) return 0;
+
     unsigned long hash = 0;
-    // TODO: replace with your own design
-    return (int)(hash % m); // basic division method
+    int p = 31; 
+    
+    for (int i = 0; str[i] != '\0'; i++) {
+        hash = (hash * p + (unsigned char)str[i]) % m;
+    }
+
+    return (int)hash;
 }
