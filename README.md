@@ -36,7 +36,7 @@ Analysis
 - 幾乎沒有非常明顯的 clustering（集中區塊）。
 
 
-Final Conclusion
+3、Final Conclusion
 
 m = 10（非質數）
   - 無論是 integer hash 或 string hash，都明顯出現 pattern clustering。  
@@ -49,3 +49,33 @@ m = 11（質數）
   - Hash function 的效果在 m 為質數時更佳。
 
 結論：在實際設計 hash table 時，選擇「質數」作為 table size m，能明顯改善 hash 分布品質。
+
+4、Environment
+- Platform: macOS Ventura / macOS Sonoma
+- Compiler: gcc / g++
+- Editor: Visual Studio Code
+- Execution: macOS Terminal
+
+5、Hash Function Design
+Integer Hash (myHashInt)
+Concept:
+- 確保 key 若為負數需先轉成正數。
+- 使用 key mod m 得到 index。
+- m 若為質數會讓 index 分布較平均。
+
+Pseudo Code:
+function myHashInt(key, m):
+    if m <= 0: return 0
+    if key < 0: key = -key
+    return key % m
+
+6、Reflection
+透過本次作業我理解到：
+1. table size (m) 選質數能顯著改善分布與降低 collision。
+2. integer hash 與 string hash 會因資料特性不同而產生不同的 clustering。
+3. hash function 並沒有唯一最好的公式，而是要根據資料特性調整設計。
+4. 不同的 hash 設計（mod、rolling hash、DJB2）分布差異很大，證明選好 m 與演算法非常重要。
+5. 實際編譯、測試、觀察輸出，比單看理論更能理解 hash 行為與限制。
+
+7、參考資料
+https://chatgpt.com/share/6923631d-22b0-8012-ad5a-82a048cb2821
