@@ -71,6 +71,9 @@ function myHashInt(key, m):
 
 6、Compilation & Execution (C Version)
 c:
+<img width="395" height="754" alt="截圖 2025-11-24 凌晨4 21 23" src="https://github.com/user-attachments/assets/94e5a8ba-2626-4ed3-a871-806ed6318229" />
+<img width="353" height="911" alt="截圖 2025-11-24 凌晨4 21 35" src="https://github.com/user-attachments/assets/893e64db-b570-4693-bec4-ad8e356ca685" />
+<img width="169" height="98" alt="截圖 2025-11-24 凌晨4 21 41" src="https://github.com/user-attachments/assets/7541e9de-a726-4f85-ac0e-64c1e3b0d87f" />
 
 c++:
 <img width="438" height="834" alt="截圖 2025-11-24 凌晨4 16 38" src="https://github.com/user-attachments/assets/233ba3a7-ec60-4091-8784-67718845ccd7" />
