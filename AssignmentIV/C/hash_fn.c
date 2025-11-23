@@ -1,3 +1,7 @@
+//Author: 郭芸婷
+//Student ID：s1131519
+//Date 11/24
+
 #include "hash_fn.h"
 int myHashInt(int key, int m) {
     if (m <= 0) return 0;
