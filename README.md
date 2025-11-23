@@ -10,7 +10,7 @@ Analysis
 - 這代表 **碰撞比較多、分布不夠均勻**。
 - 使用 m=10 這種「非質數」會讓 hash 分布變差。
 
-2、Table size m = 11
+Table size m = 11
 <img width="214" height="201" alt="截圖 2025-11-24 凌晨3 12 30" src="https://github.com/user-attachments/assets/18185bbc-734f-420d-b97d-ae828c1d4501" />
 
 Analysis
@@ -26,8 +26,8 @@ Analysis
 - C++ 自訂的字串 hash（DJB2）遇到 m=10 也會出現明顯的模數規律。
 - 若大量字串有類似開頭或 ASCII 分布，會產生許多 index 重複。
 - 表現比 m=11 差。
-- 
-2、Table size m = 11
+  
+Table size m = 11
 <img width="327" height="202" alt="截圖 2025-11-24 凌晨3 12 52" src="https://github.com/user-attachments/assets/0988025e-1cf2-497e-a194-03a8f9fbeb23" />
 
 Analysis
