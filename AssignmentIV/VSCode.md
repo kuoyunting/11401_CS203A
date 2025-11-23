@@ -1,44 +1,39 @@
-# Connect to GitHub with VSCode
+# VSCode Setup & Development Environment  
+*(Environment: macOS + VSCode + Git + GitHub)*  
 
-## Prerequisites
-Before you begin, ensure you have the following:
-- Visual Studio Code installed on your computer. [Download VS Code here](https://code.visualstudio.com/)
-- Git installed and configured on your system. [Download Git here](https://git-scm.com/).
-- A GitHub account.
+## 1. Development Environment  
+- **Operating System**: macOS (Apple Silicon / Intel MacBook)  
+- **Editor**: Visual Studio Code  
+- **Git Version**: `git --version`  
+- **Compiler**:  
+  - C: `gcc (Apple clang)`  
+  - C++: `g++ (Apple clang)`  
+- **Terminal**: macOS zsh  
 
-## Steps to Connect to GitHub
+---
 
-1. **Install the GitHub Extension for VSCode**
-    - Open VSCode.
-    - Go to the Extensions view by clicking on the Extensions icon in the Activity Bar on the side of the window.
-    - Search for "GitHub Pull Requests and Issues" and install the extension.
+## 2. Connect VSCode to GitHub  
 
-2. **Sign in to GitHub**
-    - Open the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P` on macOS).
-    - Type `GitHub: Sign in` and select the option.
-    - Follow the prompts to authenticate with your GitHub account.
+### (1) 安裝 Git 與 VSCode  
+已提前安裝：  
+- VSCode  
+- Git（macOS 內建 Xcode Command Line Tools）  
 
-3. **Clone a Repository**
-    - In VSCode, open the Command Palette.
-    - Type `Git: Clone` and select the option.
-    - Paste the URL of your GitHub repository when prompted.
-    - Choose a local folder where the repository will be cloned.
+---
 
-4. **Open the Repository**
-    - Once the repository is cloned, VSCode will prompt you to open it.
-    - Click `Open` to start working on your project.
+### (2) 在 VSCode 登入 GitHub  
+1. VSCode 左側 Extensions 搜尋：  
+   **"GitHub Pull Requests and Issues" → Install**  
+2. 按下 `Cmd + Shift + P`  
+   輸入：  
+   **GitHub: Sign in**  
+3. 依照跳出的 GitHub Browser 完成登入授權。  
 
-5. **Make Changes and Commit**
-    - Edit files in the repository as needed.
-    - Go to the Source Control view in VSCode.
-    - Stage your changes, write a commit message, and commit the changes.
+---
 
-6. **Push Changes to GitHub**
-    - After committing, click the `Sync Changes` button in the Source Control view.
-    - This will push your changes to the GitHub repository.
+## 3. Clone 課程 Repository  
 
-## Additional Tips
-- Use the built-in terminal in VSCode for advanced Git commands.
-- Enable GitLens extension for enhanced Git insights.
-
-By following these steps, you can easily connect and manage your GitHub repositories using Visual Studio Code.
+1. 在 VSCode 按下 `Cmd + Shift + P`  
+2. 輸入：  
+   **Git: Clone**  
+3. 貼上 Repository URL：  
