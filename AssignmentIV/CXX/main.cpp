@@ -1,3 +1,7 @@
+//Author: 郭芸婷
+//Student ID：s1131519
+//Date 11/24
+
 /* 
    ========================================
    Hash Function Observation (C++ Version)
