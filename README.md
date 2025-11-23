@@ -69,6 +69,16 @@ function myHashInt(key, m):
     if key < 0: key = -key
     return key % m
 
+6、Compilation & Execution (C Version)
+c:
+
+c++:
+<img width="438" height="834" alt="截圖 2025-11-24 凌晨4 16 38" src="https://github.com/user-attachments/assets/233ba3a7-ec60-4091-8784-67718845ccd7" />
+<img width="507" height="895" alt="截圖 2025-11-24 凌晨4 16 45" src="https://github.com/user-attachments/assets/5c6549c8-f96c-405d-ac16-a06fde2a7984" />
+<img width="302" height="110" alt="截圖 2025-11-24 凌晨4 16 55" src="https://github.com/user-attachments/assets/0b2fb485-fe25-4730-88db-5ca08bfcc6c4" />
+
+
+
 6、Reflection
 透過本次作業我理解到：
 1. table size (m) 選質數能顯著改善分布與降低 collision。
