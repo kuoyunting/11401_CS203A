@@ -1,2 +1,235 @@
-[Hash Table 筆記](IMG_4851%202.jpg)
+1、hash的筆記是IMG_4851 2.jpg這個檔案
+
+2、以下是我課後請Chatgpt整理給我的筆記，淺顯易懂，幫我整理每個data structure的特色、重點，之後讀起來更有架構、知道從何著手
+一、Array（陣列）
+1️⃣ 定義
+連續的記憶體空間
+使用 index 存取資料
+大小通常在宣告時決定
+2️⃣ 基本操作
+Access（存取）：O(1)
+Search（搜尋）：O(n)
+Insert / Delete：O(n)（需要搬移元素）
+3️⃣ 優缺點
+✅ 優點
+Random access 快
+結構簡單
+❌ 缺點
+大小固定（或需要 realloc）
+插入、刪除成本高
+
+二、Linked List（鏈結串列）
+1️⃣ 定義
+由多個 node 組成
+每個 node 包含：
+2️⃣ 類型
+Singly Linked List
+Doubly Linked List
+Circular Linked List
+3️⃣ 基本操作
+Insert：O(1)（已知位置）
+Delete：O(1)（已知位置）
+Search：O(n)
+無法 random access
+4️⃣ 優缺點
+✅ 優點
+動態大小
+插入、刪除快
+❌ 缺點
+記憶體額外空間（pointer）
+存取慢（必須從頭走）
+
+三、Stack（堆疊）
+1️⃣ 定義
+LIFO（Last In First Out）
+只能從「頂端」操作
+2️⃣ 基本操作
+push
+pop
+top / peek
+isEmpty
+3️⃣ 實作方式
+Array
+Linked List
+4️⃣ 常見應用
+Function call（call stack）
+括號匹配
+Expression evaluation（infix → postfix）
+
+四、Queue（佇列）
+1️⃣ 定義
+FIFO（First In First Out）
+2️⃣ 基本操作
+enqueue（尾端加入）
+dequeue（前端取出）
+3️⃣ 變形
+Circular Queue
+Priority Queue
+Deque
+4️⃣ 常見應用
+CPU scheduling
+BFS
+任務佇列
+
+五、Hash Table（🔥重點）
+1️⃣ 定義
+Hash Table = Array + Hash Function（+ Linked List）
+index = hash(key)
+2️⃣ Hash Function
+目的：
+將 key 轉成 array index
+分布要平均（diverse）
+常見形式：
+hash(key) = key % table_size
+3️⃣ Collision（碰撞）
+不同 key 對應到同一個 index
+解法一：Chaining（你筆記畫的）
+每個 array index 接一條 linked list
+Array[i] → node → node → NULL
+解法二：Open Addressing
+Linear probing
+Quadratic probing
+Double hashing
+4️⃣ 時間複雜度
+平均：O(1)
+最差（全部 collision）：O(n)
+5️⃣ Load Factor
+α = n / m
+6️⃣ Rehashing
+table 滿了
+collision 太多
+➡️ 擴大 table + 重新 hash
+
+六、Tree（樹狀結構）
+1️⃣ 基本概念
+Root、Parent、Child
+Leaf
+Height、Depth
+2️⃣ Binary Tree
+每個 node 最多兩個 child
+3️⃣ Binary Search Tree（BST）
+性質：
+Left < Root < Right
+時間複雜度：
+平均：O(log n)
+最差：O(n)
+4️⃣ 平衡樹
+AVL Tree
+Red-Black Tree
+👉 避免 BST 退化
+5️⃣ Heap
+Complete Binary Tree
+Min Heap / Max Heap
+常用於 Priority Queue
+
+七、Graph（圖）
+1️⃣ 組成
+Vertex（點）
+Edge（邊）
+2️⃣ 表示方式
+Adjacency Matrix
+Adjacency List
+3️⃣ Traversal
+BFS（Queue）
+DFS（Stack / Recursion）
+4️⃣ 常見應用
+地圖
+社交網路
+排程關係
+
+3、以下是我看過chatgpt的筆記後，去網路上找的教學影片。這個合集的影片大部分我都看過
+https://www.youtube.com/watch?v=92S4zgXN17o&list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P
+
+4、考前我會請chatgpt按照前幾次小考的題型，給我可能考的題目，抓考試重點
+一、Array（陣列）
+概念題
+為什麼 array 可以在 O(1) 時間內存取元素？
+為什麼在 array 中插入一個元素通常是 O(n)？
+Array 與 linked list 在記憶體配置上的差異是什麼？
+什麼情況下 array 需要 realloc？代價是什麼？
+判斷 / 選擇題
+Array 的搜尋時間複雜度一定是 O(1)。（T/F）
+動態陣列可以避免所有 resize 問題。（T/F）
+實作題
+實作一個 function，在 array 中插入一個元素到指定 index
+實作 array 的刪除操作並說明時間複雜度
+二、Linked List（鏈結串列）
+概念題
+為什麼 linked list 無法 random access？
+singly 與 doubly linked list 差在哪？
+為什麼 linked list 插入、刪除可以是 O(1)？
+linked list 的記憶體成本來自哪裡？
+畫圖題（老師超愛）
+畫出 singly linked list 插入節點的流程
+畫出刪除中間節點的指標變化
+實作題
+實作 linked list 的 insert at head
+實作 linked list 的 delete by value
+實作搜尋某個 key 是否存在
+三、Stack（堆疊）
+概念題
+Stack 為什麼是 LIFO？
+Stack 可以用哪些資料結構實作？
+Stack overflow 與 underflow 是什麼？
+應用題（必考）
+用 stack 檢查括號是否正確配對
+infix 轉 postfix 的流程說明
+postfix expression 的計算過程
+實作題
+用 array 實作 stack
+用 linked list 實作 stack
+四、Queue（佇列）
+概念題
+Queue 與 stack 最大的差別是什麼？
+為什麼一般 queue 會浪費空間？
+Circular queue 如何解決空間浪費問題？
+判斷 / 選擇題
+Queue 一定只能用 array 實作。（T/F）
+BFS 一定會用到 queue。（T/F）
+實作題
+實作 basic queue（enqueue / dequeue）
+實作 circular queue 並說明 front / rear 的變化
+五、Hash Table（🔥最重要）
+概念題
+Hash table 的核心概念是什麼？
+Hash function 的目的是什麼？
+什麼是 collision？為什麼一定會發生？
+key 不夠 diverse 會造成什麼問題？
+計算題（老師超愛）
+給定 hash(key) = key % 10，計算一組 key 的 index
+計算 load factor 並判斷是否需要 rehash
+碰撞處理
+chaining 的原理是什麼？
+open addressing 與 chaining 的差異
+linear probing 可能產生什麼問題？
+申論題
+說明 hash table 在平均情況下為何是 O(1)
+什麼情況下 hash table 會退化成 O(n)？
+六、Tree（樹）
+基本概念
+定義 root、leaf、height、depth
+tree 與 graph 的差異
+Binary Tree / BST
+Binary tree 與 BST 的差別
+為什麼 BST 平均是 O(log n)？
+BST 什麼情況會退化？
+畫圖題
+插入一組數字並畫出 BST
+畫出 inorder / preorder / postorder traversal
+平衡樹 & Heap
+為什麼需要 AVL / Red-Black tree？
+Heap 與 BST 的用途差異
+七、Graph（圖）
+概念題
+什麼是 vertex 與 edge？
+adjacency matrix 與 adjacency list 的差異
+哪一種表示法比較省空間？為什麼？
+Traversal
+BFS 與 DFS 的差別
+BFS 為什麼一定要用 queue？
+DFS 為什麼常用 recursion？
+應用題
+用 BFS 找最短路徑
+用 DFS 判斷是否有 cycle
+
 
